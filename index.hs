@@ -40,7 +40,7 @@ find i xs = [b | (a, b) <- xs, a == i]
 {-
     POSITIONS
     INPUTS: an identifier and a list of values
-    OUTPUTS: a list of integers that holds the indexes where identifier == value
+    OUTPUTS: a list of integers that holds the indices where identifier == value
 -}
 positions :: Eq a => a -> [a] -> [Int]
 positions v xs = find v (zip xs [0..length xs]) 
