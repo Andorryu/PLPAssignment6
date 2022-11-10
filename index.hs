@@ -50,3 +50,5 @@ positions v xs = find v (zip xs [0..length xs])
     INPUTS: two lists of integers
     OUTPUTS: an int which is the scalar product of the two lists
 -}
+scalarproduct :: [Int] -> [Int] -> Int
+scalarproduct xs ys = sum [a * b | (a, b) <- zip xs ys]
