@@ -1,3 +1,4 @@
+import Data.Bitraversable (Bitraversable)
 {-
     EECS 368 Assignment 6
     Defined the following 5 Haskell Functions:
@@ -33,6 +34,8 @@ perfects n = [x | x <- [1..n], sum (factors x) == x]
     INPUTS: an identifier and a list of key-value pairs
     OUTPUTS: a list where each element is value if identifier == key
 -}
+find :: Eq a => a -> [(a, b)] -> [b]
+find i xs = [b | (a, b) <- xs, a == i]
 
 {-
     POSITIONS
