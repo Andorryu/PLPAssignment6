@@ -13,6 +13,8 @@
     INPUTS: a int representing the length of an array and a value
     OUTPUTS: a list of size length where every element is value
 -}
+replicate :: Int -> a -> [a]
+replicate n v = [v | x <- [1..n]]
 
 {-
     PERFECTS
